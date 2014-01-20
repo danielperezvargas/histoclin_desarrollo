@@ -37,7 +37,7 @@ Partial Class Form1
         Me.GroupBox1.Size = New System.Drawing.Size(416, 182)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Mirthe Dalia"
+        Me.GroupBox1.Text = "Arteaga"
         '
         'Button1
         '
@@ -45,7 +45,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(123, 54)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Flores"
+        Me.Button1.Text = "Edgar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'CheckBox1
@@ -55,7 +55,7 @@ Partial Class Form1
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
         Me.CheckBox1.TabIndex = 1
-        Me.CheckBox1.Text = "López"
+        Me.CheckBox1.Text = "Hinojosa"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Form1
@@ -65,7 +65,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1038, 402)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
-        Me.Text = "Prueba Exitosa"
+        Me.Text = "Descargando Edgar..."
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
