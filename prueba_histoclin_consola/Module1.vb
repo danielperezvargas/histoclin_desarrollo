@@ -2,7 +2,7 @@
 
     Sub Main()
 
-        Console.Write("Hola Mundo del GIT")
+        Console.Write("Hola Mundo del GIT, descargando cambios")
 
         Console.WriteLine()
 
