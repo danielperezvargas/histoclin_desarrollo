@@ -22,9 +22,12 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -32,12 +35,22 @@ Partial Class Form1
         '
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 24)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(416, 182)
+        Me.GroupBox1.Size = New System.Drawing.Size(180, 133)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mirthe Dalia"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(24, 93)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(69, 21)
+        Me.CheckBox1.TabIndex = 1
+        Me.CheckBox1.Text = "López"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -48,22 +61,23 @@ Partial Class Form1
         Me.Button1.Text = "Flores"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'ReportViewer2
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(24, 102)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
-        Me.CheckBox1.TabIndex = 1
-        Me.CheckBox1.Text = "López"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        ReportDataSource1.Name = "equipos"
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer2.Location = New System.Drawing.Point(212, 12)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote
+        Me.ReportViewer2.Size = New System.Drawing.Size(1035, 638)
+        Me.ReportViewer2.TabIndex = 3
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1038, 402)
+        Me.ClientSize = New System.Drawing.Size(1259, 662)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.ReportViewer2)
         Me.Name = "Form1"
         Me.Text = "Prueba Exitosa"
         Me.GroupBox1.ResumeLayout(False)
@@ -74,4 +88,5 @@ Partial Class Form1
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

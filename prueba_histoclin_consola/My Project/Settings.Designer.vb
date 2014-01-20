@@ -53,6 +53,17 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString), _
+         Global.System.Configuration.DefaultSettingValueAttribute("User Id=root;Host=localhost;Port=1865;Database=histoclin;Persist Security Info=Tr" & _
+            "ue")> _
+        Public ReadOnly Property histoclin_db() As String
+            Get
+                Return CType(Me("histoclin_db"), String)
+            End Get
+        End Property
     End Class
 End Namespace
 
